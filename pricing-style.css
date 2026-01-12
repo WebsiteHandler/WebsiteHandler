@@ -351,3 +351,9 @@ html {
     .pricing-card { padding: 30px 20px; }
     .amount { font-size: 3.5rem; }
 }
+
+@media (max-width: 768px) {
+    .round-arrow {
+        display: none !important;
+    }
+}
