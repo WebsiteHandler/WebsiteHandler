@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebsiteHandler | Professional Web Development</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Website<span>Handler</span></a>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html">About</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li class="nav-cta"><a href="contact.html">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="about">
+        <div class="container">
+            <div class="hero-content animate-fade-up">
+                <h1>Your Business Deserves a Professional Website</h1>
+                <p class="hero-description">We build, host, and maintain your site so you can focus on running your business.</p>
+
+                <div class="hero-btns">
+                    <a href="pricing.html" class="btn btn-primary">View Plan</a>
+                    <a href="contact.html" class="btn btn-secondary">Free Consultation</a>
+                </div>
+
+                <a href="#reviews" class="round-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="gradient-wrapper">
+        <section class="reviews" id="reviews">
+            <div class="container">
+                <h2 class="section-title animate-fade-up">What Our Clients Say</h2>
+                <div class="reviews-grid">
+                    <div class="review-card animate-slide-in" style="animation-delay: 0.1s;">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"WebsiteHandler transformed our online presence flawlessly."</p>
+                        <div class="reviewer-info">
+                            <strong>Sarah Jenkins</strong>
+                            <span>CEO, TechFlow</span>
+                        </div>
+                    </div>
+                    <div class="review-card animate-slide-in" style="animation-delay: 0.2s;">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"The 24/7 care plan gives me total peace of mind."</p>
+                        <div class="reviewer-info">
+                            <strong>Mark Thompson</strong>
+                            <span>Owner, BlueBay Retail</span>
+                        </div>
+                    </div>
+                    <div class="review-card animate-slide-in" style="animation-delay: 0.3s;">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"Professional, fast, and incredibly helpful."</p>
+                        <div class="reviewer-info">
+                            <strong>Elena Rodriguez</strong>
+                            <span>Founder, Creative Pulse</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="cta-final">
+            <div class="container">
+                <div class="cta-content animate-fade-up">
+                    <p id="description-p">Join dozens of businesses that trust WebsiteHandler for their growth.</p>
+                    <a href="pricing.html" class="btn btn-primary btn-large">Get Started Now</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', function () {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(n => n.addEventListener('click', () => {
+            menu.classList.remove('is-active');
+            menuLinks.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
