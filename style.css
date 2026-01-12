@@ -422,14 +422,28 @@ body {
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 }
 
-/* Fix for overlapping header on mobile */
 @media (max-width: 768px) {
     .hero {
-        padding-top: 80px; /* Adjust this value based on your navbar height */
-        align-items: flex-start; /* Optional: helps alignment if text is very long */
+        padding-top: 80px; /* Space for the navbar */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Keeps content centered in the remaining space */
     }
-    
-    .hero-content {
-        margin-top: 40px; /* Extra breathing room for the H1 */
+
+    .hero-content h1 { 
+        font-size: 2.2rem; /* Slightly smaller to save vertical space */
+        margin-bottom: 15px;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+        margin-bottom: 25px;
+    }
+
+    /* Fix for the Arrow visibility */
+    .round-arrow {
+        margin-top: 30px; /* Reduced from 80px */
+        width: 40px;      /* Slightly smaller for mobile screens */
+        height: 40px;
     }
 }
